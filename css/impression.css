@@ -1,0 +1,87 @@
+/* impression.css */
+
+/* Styles généraux du corps */
+body{
+    background-color: #fff;
+    color: black;
+    font-family: serif;
+    font-size: 10pt;
+}
+div#conteneur{
+   
+    width: 100%;
+    margin:0;
+    padding:0;
+    border: none;
+}
+/* Ocultar elementos no necesarios */
+ header,
+nav,
+footer
+{
+  display: none ;
+}
+/* Iconos innecesarios en impresión */
+section article i {
+  display: none !important;
+}
+/* Botones no necesarios */
+section article button {
+  display: none !important;
+}
+section#accroche{
+    background-image: none;
+    height: auto;
+    min-height: 1em;
+    display: block;
+}
+section#accroche article {
+  margin: 0 !important;
+  padding: 1em 0;
+  display: block !important;
+  text-align: left !important;
+  color: black !important;
+  font-family: sans-serif !important;
+}
+section#accroche article h2,
+section#accroche article p {
+  color: black !important;
+  font-size: 1.2em;
+  font-family: sans-serif !important;
+  display: block !important;
+  visibility: visible !important;
+}
+/* Mostrar solo el contenido principal */
+
+section#contenu,
+section#produits {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Ajustes para los artículos */
+section article {
+  display: block;
+  text-align: left;
+  padding: 1em 0;
+  page-break-inside: avoid;
+}
+
+/* Títulos más sobrios */
+section article h2 {
+  font-size: 1.5em;
+  font-family: sans-serif;
+  color: black;
+}
+/* Imágenes adaptadas */
+section article img {
+  max-width: 100%;
+  height: auto;
+}
+/* Enlaces mostrados como texto */
+a::after {
+  content: " (" attr(href) ")";
+  font-size: 0.8em;
+}
